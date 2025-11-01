@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const ModalOverlay = styled.div`
@@ -45,17 +45,12 @@ const ModalContent = styled.div`
 `;
 
 const ModalHeader = styled.div`
+  position: relative;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center; 
   padding: 15px 20px;
   border-bottom: 1px solid #e0e0e0;
-  gap: 10px;
-
-  @media (max-width: 480px) {
-    flex-direction: column;
-    padding: 10px;
-  }
 `;
 
 const ModalTitle = styled.h2`
@@ -70,9 +65,10 @@ const ModalTitle = styled.h2`
 `;
 
 const HeaderButtons = styled.div`
+  position: absolute;
+  right: 20px;
   display: flex;
   gap: 10px;
-  flex-wrap: wrap;
 `;
 
 const HeaderButton = styled.button`
@@ -131,22 +127,17 @@ const LoadingOverlay = styled.div`
 
 const ProjectPreviewModal = ({ project, onClose }) => {
   const [isLoading, setIsLoading] = useState(true);
+
   if (!project) return null;
 
   const handleIframeLoad = () => setIsLoading(false);
 
   const handleOverlayClick = (e) => {
-    if (e.target === e.currentTarget) {
-      document.body.style.overflow = 'unset';
-      onClose();
-    }
+    if (e.target === e.currentTarget) onClose();
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Escape') {
-      document.body.style.overflow = 'unset';
-      onClose();
-    }
+    if (e.key === 'Escape') onClose();
   };
 
   const openFullScreen = () => {
@@ -155,15 +146,17 @@ const ProjectPreviewModal = ({ project, onClose }) => {
   };
 
   const openNewWindow = () => {
-    window.open(project.previewUrl, '_blank');
+    window.open(project.previewUrl, '_blank', 'noopener,noreferrer');
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     document.addEventListener('keydown', handleKeyDown);
+    const originalOverflow = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
+
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = 'unset';
+      document.body.style.overflow = originalOverflow;
     };
   }, []);
 
@@ -173,11 +166,11 @@ const ProjectPreviewModal = ({ project, onClose }) => {
         <ModalHeader>
           <ModalTitle>{project.title}</ModalTitle>
           <HeaderButtons>
-            <HeaderButton onClick={() => { document.body.style.overflow='unset'; onClose(); }}>Close</HeaderButton>
+            <HeaderButton onClick={onClose}>Close</HeaderButton>
             {project.previewUrl && (
               <>
                 <HeaderButton onClick={openFullScreen}>Full Screen</HeaderButton>
-                <HeaderButton onClick={openNewWindow}>New Window</HeaderButton>
+                <HeaderButton onClick={openNewWindow}>Open in New Tab</HeaderButton>
               </>
             )}
           </HeaderButtons>
