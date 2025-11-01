@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './projects.css';
 import projectImage from '../../assets/placeholderImage.jpg';
 import overworldImage from '../../assets/overworld-preview.jpg';
+import musicPlayerImage from '../../assets/music-player-banner.png';
 import ProjectPreviewModal from './ProjectPreviewModal.jsx';
 
 const Projects = () => {
@@ -21,7 +22,7 @@ const Projects = () => {
       id: 2,
       title: 'A Generic Music Player',
       description: 'A full-featured music player with playlist and playback controls.',
-      image: projectImage,
+      image: musicPlayerImage,
       type: 'website',
       previewUrl: '/projects/music-player/index.html',
     },
@@ -67,20 +68,6 @@ const Projects = () => {
     <>
       <div className="heading">
         <h1>Work</h1>
-        <div className="options">
-          <button 
-            onClick={() => handleButtonClick('web')} 
-            className={projectType === 'web' ? 'active' : ''}
-          >
-            Web
-          </button>
-          <button 
-            onClick={() => handleButtonClick('logo')} 
-            className={projectType === 'logo' ? 'active' : ''}
-          >
-            Logo
-          </button>
-        </div>
       </div>
 
       <div className="project-previews">
