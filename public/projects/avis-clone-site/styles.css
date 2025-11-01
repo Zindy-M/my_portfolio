@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open sans", sans-serif;
+    transition: all .1s;
+  }
+
+:root {
+--main-red: #d4002a;
+--main-dark-red: #790018;
+--main-white: white;
+}
+
+.nav-bar {
+    background-color: var(--main-red);
+    color: var(--main-white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 80px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--main-red);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--main-blue);
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navigation ul {
+    display: flex;
+    list-style-type: none;
+    gap: 10px;
+}
+
+.navigation ul a {
+    color: var(--dark-gray);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 30px 15px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.navigation ul a:hover {
+    color: var(--main-dark-red);
+}
+
+.navigation ul a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-red);
+}
+
+.navigation i {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+.sign-in {
+    text-decoration: none;
+    color: var(--main-white);
+    text-transform: uppercase;
+    padding: 20px 18px;
+    border-right: solid 1px var(--main-white);
+}
+
+.sign-in i {
+    margin-left: 5px;
+    font-size: 25px;
+}
+
+.search {
+    color: var(--main-white);
+    text-decoration: none;
+    font-size: 25px;
+    padding: 18px 25px;
+}
+
+.menu {
+    position: absolute;
+    top: 4vw;
+    left: 0;
+    width: 100%;
+    background-color: var(--main-white);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0 30px;
+    grid-auto-flow: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 45px;
+    color: black;
+    box-shadow: 0 60px 50px rgba(0, 0, 0, 0.5);
+    z-index: 9999999;
+}
+
+.nav-menu .menu a {
+    text-decoration: none;
+    font-size: small;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    text-transform: uppercase;
+    padding: 25px 0;
+    border-top: solid 1px black;
+}
+
+.nav-menu .menu a:hover {
+    background-color: var(--main-white);
+    color: var(--main-red);
+}
+
+.hidden {
+    display: none;
+}
+
+.landing {
+    width: 100%;
+    height: 600px;
+    background-image: url(resources/Car-interior.jpg);
+    background-size: cover;
+    backdrop-filter: blur(10px);
+    background-position: 50% 30%;
+    padding: 25px 50px;
+}
+
+.sign-up {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.363);
+    backdrop-filter: blur(10px);
+    color: var(--main-white);
+    padding: 12px 16px;
+    border-radius: 10px;    
+    margin-bottom: 25px;
+}
+
+.sign-up a {
+    font-size: large;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--main-white);
+}
+
+.sign-up a i {
+    margin-left: 5px;
+}
+
+.sign-up a:hover {
+    color: var(--main-red);
+}
+
+.sign-up span {
+    margin-left: 35px;
+}
+
+.car-hire {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--main-white);
+}
+
+.signup-description {
+    width: 700px;
+    padding-right: 150px;
+    padding-bottom: 80px;
+}
+.signup-description h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.signup-description p {
+    font-size: 20px;
+    margin-bottom: 25px;
+    line-height: 32px;
+}
+
+.signup-description button {
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    border-style: none;
+    color: var(--main-red);
+    text-transform: uppercase;
+}
+
+.signup-description button:hover {
+    color: var(--main-white);
+    background-color: var(--main-red);
+    cursor: pointer;
+}
+
+.hire-location {
+    width: 700px;
+    height: 400px;
+    background-color: var(--main-white);
+    border-radius: 15px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);+ */
+}
