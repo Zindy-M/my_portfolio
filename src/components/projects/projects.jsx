@@ -36,11 +36,11 @@ const Projects = () => {
     },
     {
       id: 4,
-      title: 'Task Manager',
-      description: 'A productivity app to manage tasks and projects efficiently.',
+      title: 'Task Management System',
+      description: 'A productivity app to manage tasks, a to-do list',
       image: projectImage,
-      type: 'app',
-      previewUrl: '/projects/task-manager/index.html',
+      type: 'react',
+      previewUrl: '/projects/task-management-system/index.html',
     },
   ];
 
@@ -67,7 +67,7 @@ const Projects = () => {
   return (
     <>
       <div className="heading">
-        <h1>Work</h1>
+        <h1>My Work</h1>
       </div>
 
       <div className="project-previews">
