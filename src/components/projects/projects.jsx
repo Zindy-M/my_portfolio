@@ -3,6 +3,8 @@ import './projects.css';
 import projectImage from '../../assets/placeholderImage.jpg';
 import overworldImage from '../../assets/overworld-preview.jpg';
 import musicPlayerImage from '../../assets/music-player-banner.png';
+import taskManagerImage from '../../assets/task-manager-banner.png';
+import weatherImage from '../../assets/weather-banner.png';
 import ProjectPreviewModal from './ProjectPreviewModal.jsx';
 
 const Projects = () => {
@@ -30,17 +32,17 @@ const Projects = () => {
       id: 3,
       title: 'Weather Application',
       description: 'Real-time weather app with forecasts and location-based data.',
-      image: projectImage,
-      type: 'app',
-      previewUrl: '/projects/weather-app/index.html',
+      image: weatherImage,
+      type: 'react',
+      previewUrl: 'https://monumental-monstera-2d3055.netlify.app/',
     },
     {
       id: 4,
-      title: 'Task Management System',
+      title: 'Task Manager App',
       description: 'A productivity app to manage tasks, a to-do list',
-      image: projectImage,
+      image: taskManagerImage,
       type: 'react',
-      previewUrl: '/projects/task-management-system/index.html',
+      previewUrl: 'https://cerulean-malabi-06e0cd.netlify.app/',
     },
   ];
 
