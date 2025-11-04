@@ -3,6 +3,10 @@
   background-color: white;
 }
 
+#name, #email, #message {
+  color: black;
+}
+
 .contact-container {
   max-width: 1200px;
   margin: 0 auto;
