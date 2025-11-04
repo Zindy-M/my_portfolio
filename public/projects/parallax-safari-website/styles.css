@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}  
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-weight: bolder;
+    overflow-x: hidden;
+    font-family: "bungee inline", sans-serif;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#logo {
+    display: none;
+    margin-right: 5rem;
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+.navigation a {
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .1s ease-in-out;
+    color: rgb(10, 1, 0);
+    border-radius: 10px;
+    padding: 0 10px;
+}
+
+
+.navigation a:hover {
+    transform: translateX(20px);
+    color: orange;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero img{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 285px;
+    color: white;
+    font-size: 40px;
+    border-radius: 10px;
+    padding: 0 30px;
+    border-radius: 30px;
+
+}
+
+.landing {
+    position: relative;
+    background-color: rgb(10, 1, 0);
+    padding: 100px;
+}
+
+.landing h1 {
+    margin-bottom: 40px;
+}

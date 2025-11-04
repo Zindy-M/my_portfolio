@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './projects.css';
 import projectImage from '../../assets/placeholderImage.jpg';
-import overworldImage from '../../assets/overworld-preview.jpg';
+import platformerImage from '../../assets/platformer-preview.png';
 import musicPlayerImage from '../../assets/music-player-banner.png';
 import taskManagerImage from '../../assets/task-manager-banner.png';
+import parallaxImage from '../../assets/parallax-banner.png';
 import weatherImage from '../../assets/weather-banner.png';
 import ProjectPreviewModal from './ProjectPreviewModal.jsx';
 
@@ -14,9 +15,9 @@ const Projects = () => {
   const webProjects = [
     {
       id: 1,
-      title: 'Overworld',
+      title: 'Overworld Platformer Game',
       description: 'A fun and engaging platformer mario-type game built with Pygame.',
-      image: overworldImage,
+      image: platformerImage,
       type: 'pygame',
       previewUrl: '/projects/overworld-preview/index.html',
     },
@@ -43,6 +44,14 @@ const Projects = () => {
       image: taskManagerImage,
       type: 'react',
       previewUrl: 'https://cerulean-malabi-06e0cd.netlify.app/',
+    },
+    {
+      id: 5,
+      title: 'Parallax Scrolling Website',
+      description: 'A visually stunning website showcasing parallax scrolling effects.',
+      image: parallaxImage,
+      type: 'Website',
+      previewUrl: '/projects/parallax-safari-website/index.html',
     },
   ];
 

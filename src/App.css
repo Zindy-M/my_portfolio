@@ -105,13 +105,13 @@ body, html {
 }
 
 .hero {
-  height: 80vh;
+  height: 85vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background-color 2s ease-in-out;
-  padding-top: 40px;
+  /* padding-top: 10px; */
   box-sizing: border-box;
   padding-right: 10vw;
   left: 0;
@@ -120,7 +120,25 @@ body, html {
 .hero-text {
   color: #333;
   font-size: 1rem;
+  /* font-style: italic; */
   /* font-family: 'Bungee Shade', sans-serif; */
+}
+
+.blinking-cursor {
+  font-style: italic;
+  border-right: 0.15em solid #10b981;
+  animation: blink-caret 0.75s step-end infinite;
+  padding-left: 5px;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #10b981;
+  }
 }
 
 h1 {
@@ -183,6 +201,14 @@ h1 {
 
   .top-band {
     padding: 10px 5vw;
+  }
+
+  .footer {
+    height: 20vh;
+    width: 100%;
+    display: block;
+    background-color: #059669;
+    padding-bottom: 50px;
   }
 }
 
